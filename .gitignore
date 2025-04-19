@@ -30,6 +30,8 @@ android/.externalNativeBuild/
 android/local.properties
 android/gradle.properties
 android/app/build/
+android/app/src/debug/res/xml/
+android/app/src/release/res/xml/
 
 # Gradle caches and logs
 .gradle/
@@ -43,21 +45,22 @@ build/
 *.jar
 *.class
 
-# Firebase / Google Services (can be machine-specific)
-google-services.json
-
 # AdMob / Google Mobile Ads SDK related
-google-services.json      # Contains API keys and app IDs — DO NOT TRACK
-
-# Sometimes Firebase dependencies are used for mediation or analytics
-*.firebaseconfig.json     # Just in case
-
-# Android Studio's generated config for AdMob
+google-services.json      
+firebase.json  
+*.firebaseconfig.json     
+crashlytics-build.properties
+firebase-*.properties
+google-services.json
 android/app/google-services.json
 
-# Auto-generated XMLs (optional, depends on setup)
-android/app/src/debug/res/xml/
-android/app/src/release/res/xml/
+# 🔹 GodotAdMob plugin-generated build files (if used)
+addons/GodotAdMob/tmp/     
+addons/GodotAdMob/build/   
+addons/GodotAdMob/.gradle/
+addons/GodotAdMob/.idea/
+addons/GodotAdMob/local.properties
+
 
 # If using mediation adapters (e.g. Unity, Facebook, etc.), exclude these if generated
 *.aar
