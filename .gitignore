@@ -8,18 +8,60 @@ export_credentials.cfg
 # Imported translations (automatically generated from CSV files)
 *.translation
 
-# Android
+# Android build outputs
 *.apk
 *.aab
 *.idsig
-*.keystore      
-*.jks           
+*.apks
+*.dex
+
+# Android signing keys (VERY sensitive!)
+*.keystore
+*.jks
+*.pem
+*.key
+
+# Android Studio / Gradle build folders
 android/build/
 android/.gradle/
 android/.cxx/
-android/local.properties
 android/.idea/
-android/gradle.properties  
+android/.externalNativeBuild/
+android/local.properties
+android/gradle.properties
+android/app/build/
+
+# Gradle caches and logs
+.gradle/
+build/
+*.iml
+*.log
+
+# Misc build artifacts
+*.zip
+*.so
+*.jar
+*.class
+
+# Firebase / Google Services (can be machine-specific)
+google-services.json
+
+# AdMob / Google Mobile Ads SDK related
+google-services.json      # Contains API keys and app IDs — DO NOT TRACK
+
+# Sometimes Firebase dependencies are used for mediation or analytics
+*.firebaseconfig.json     # Just in case
+
+# Android Studio's generated config for AdMob
+android/app/google-services.json
+
+# Auto-generated XMLs (optional, depends on setup)
+android/app/src/debug/res/xml/
+android/app/src/release/res/xml/
+
+# If using mediation adapters (e.g. Unity, Facebook, etc.), exclude these if generated
+*.aar
+*.jar
 
 # User/OS/Temp
 *.tmp
