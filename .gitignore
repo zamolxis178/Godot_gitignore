@@ -1,15 +1,49 @@
-# Godot 4+ specific ignores
-.godot/
-
-# Godot-specific ignores
+# Godot engine
 .import/
+.godot/
+export_presets.cfg  # Excludes export settings (sensitive data like keys)
 export.cfg
 export_credentials.cfg
 
 # Imported translations (automatically generated from CSV files)
 *.translation
 
-# Mono-specific ignores
+# Android
+*.apk
+*.aab
+*.keystore      # Add this
+*.jks           # Add this
+android/build/
+android/.gradle/
+android/.cxx/
+android/local.properties
+android/.idea/
+android/gradle.properties  # Optional: exclude if machine-specific
+
+# User/OS/Temp
+*.tmp
+*.temp
+*.bak
+*.swp
+*.log
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# Godot Mono (C#)
 .mono/
+*.csproj
+*.sln
+*.userprefs
 data_*/
 mono_crash.*.json
+
+# Lock/Generated files
+project.godot.lock
+.gradle/      # Keep if you have root Gradle files
+build/        # Keep if you have root builds
+
